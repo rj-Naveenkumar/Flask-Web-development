@@ -8,7 +8,12 @@ def home():
 
 @app.route('/market')
 def market_page():
-    return render_template('market.html')
+    items=[
+        {'id':1,'name':'phone','price':350000},
+        {'id':2,'name':'laptop','price':500000},
+        {'id':3,'name':'tablet','price':200000},
+    ]
+    return render_template('market.html',items=items)
 
 if __name__ == '__main__':
     app.run(debug=True)
