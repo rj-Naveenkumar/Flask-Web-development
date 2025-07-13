@@ -1,4 +1,5 @@
 from market import db
+from market import bcrypt
 
 class User(db.Model):
     __tablename__ = 'user' 
@@ -13,6 +14,11 @@ class User(db.Model):
     @property  
     def password(self):
         return self.password
+    
+    @password.setter
+    def password(self, plain_text_password):
+        self.password_hash = bcrypt.generate_password_hash(plain_text_password).decode('utf-8')
+
     
 
 
