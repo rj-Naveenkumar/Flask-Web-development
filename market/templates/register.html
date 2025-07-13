@@ -6,7 +6,8 @@
 {% block content %}
   <div class='container'>
     <form method="POST" class="form-register" style="color:aliceblue;">
-        <img class="mb-4" src="D:\Flask-Web-development\register_background.avif" alt="Register Image">
+        <img class="mb-4" src="{{ url_for('static', filename='images/register_background.avif') }}" alt="Register Image">
+
         {{ form.username.label() }}
         {{ form.username(class="form-control", placeholder="user Name") }}
 
