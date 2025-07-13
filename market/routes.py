@@ -16,5 +16,9 @@ def market_page():
 @app.route('/register')
 def register_page():
     form = RegisterForm()
+    if form.validate_on_submit():
+        
+
+
     return render_template('register.html',form=form)
 
