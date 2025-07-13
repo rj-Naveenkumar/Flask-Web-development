@@ -7,6 +7,7 @@
 <body class="text-center">
   <div class='container'>
     <form method="POST" class="form-register" style="color:aliceblue;">
+        {{ form.hidden_tag() }}
         <img class="mb-4" src="{{ url_for('static', filename='images/register_background.avif') }}" alt="Register Image">
         <h1 class="h3 mb-3 font-weight-normal">
             Please Create Your Account
